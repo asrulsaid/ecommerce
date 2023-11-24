@@ -19,7 +19,7 @@
                 <div class="card-header">{{ __('Product') }}</div>
 
                 <div class="card-body">
-                    <a href="{{ route('product.create') }}" class="btn btn-primary mb-3">Add Product</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-primary mb-3">Add Product</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
@@ -44,8 +44,8 @@
                                     <td>{{ $product->description }}</td>
                                     <td>
                                         <div class="d-flex">
-                                            <a href="{{ route('product.edit', $product->id) }}" class="btn btn-info">Edit</a>
-                                            <form action="{{ route('product.destroy', $product->id) }}" method="POST">
+                                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-info">Edit</a>
+                                            <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Delete</button>
